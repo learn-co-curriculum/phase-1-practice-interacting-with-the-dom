@@ -1,19 +1,24 @@
+//find the timer
 let timer = document.getElementById("counter")
-let timerInterval = setInterval(function () {
-    timer.innerText = parseInt(timer.innerText) + 1
-}, 1000)
+//find the innerText for the timer
+//increment that text every second 
 let plusButton = document.getElementById("plus")
 let minusButton = document.getElementById("minus")
 let likeButton = document.getElementById("heart")
 let pauseButton = document.getElementById("pause")
 let likesList = document.getElementsByClassName("likes")[0]
 let body = document.body
-let likeTracker = {}
-let form = document.getElementById("comment-form")
-let commentsList = document.getElementById("list")
+let interval = setInterval(function () { timer.innerText = parseInt(timer.innerText) + 1 }, 1000)
 
-function handleClick(e) {
-    console.log("clicking")
+let likeTracker = {}
+let resumeButton = document.createElement("button")
+
+let commentsContainer = document.getElementById("list")
+let form = document.getElementById("comment-form")
+
+
+
+function clickHandler(e) {
     switch (e.target.id) {
         case "plus":
             timer.innerText = parseInt(timer.innerText) + 1
@@ -24,62 +29,58 @@ function handleClick(e) {
             }
             break;
         case "heart":
-            let likedNums = Object.keys(likeTracker)
+            let likedNums = Object.keys(likeTracker) //will return an array of all the keys
             let numString = timer.innerText
+
             if (likedNums.includes(numString)) {
+                console.log("number already liked")
                 likeTracker[`${numString}`]++
-                let numOfLikes = likeTracker[`${numString}`]
-                let li = likesList.querySelector(`li[data-id="${numString}"]`)
-                li.innerText = `${numString} has been liked ${numOfLikes} times`
-                console.log("in here", likeTracker)
+                let li = document.querySelector(`li[data-id="${numString}"]`)
+                li.innerText = `${numString} has been liked ${likeTracker[`${numString}`]} times`
+
+
             } else {
-                console.log("not here", likeTracker)
+                console.log("number liked for first time")
                 likeTracker[`${numString}`] = 1
                 let li = document.createElement("li")
+                li.innerText = `${numString} has been liked`
                 li.dataset.id = numString
-                li.innerText = numString + " " + "has been liked 1 time"
                 likesList.appendChild(li)
             }
-            break
+            break;
         case "pause":
-            clearInterval(timerInterval)
+            console.log("pause some stuff")
+            clearInterval(interval)
             plusButton.disabled = true
             minusButton.disabled = true
             likeButton.disabled = true
-            let resumeButton = document.createElement("button")
             resumeButton.innerText = "resume"
             resumeButton.id = "resume"
             e.target.parentNode.replaceChild(resumeButton, pauseButton)
-            break
+            break;
         case "resume":
-            console.log("resuming")
-            timerInterval = setInterval(function () {
-                timer.innerText = parseInt(timer.innerText) + 1
-            }, 1000)
+            interval = setInterval(function () { timer.innerText = parseInt(timer.innerText) + 1 }, 1000)
             plusButton.disabled = false
             minusButton.disabled = false
             likeButton.disabled = false
-            pauseButton = document.createElement("button")
-            pauseButton.innerText = "pause"
-            pauseButton.id = "pause"
+            e.target.parentNode.replaceChild(pauseButton, resumeButton)
+            break;
         default:
             break;
     }
+
+
 }
 
-function submitHandler(e) {
+
+form.addEventListener("submit", function (e) {
+    e.stopPropagation()
     e.preventDefault()
     let comment = e.target[0].value
     let pTag = document.createElement("p")
     pTag.innerText = comment
-    commentsList.appendChild(pTag)
+    commentsContainer.appendChild(pTag)
     form.reset()
-}
 
-
-
-
-
-
-form.addEventListener("submit", submitHandler)
-body.addEventListener("click", handleClick)
+})
+body.addEventListener("click", clickHandler)
