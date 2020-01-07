@@ -13,9 +13,9 @@ The challenge is to reverse engineer these features and build them yourself, usi
 
 ## Rewriting the functionality
 
-To begin, comment out the script tag linking to `index.min.js` in the html file.
+To begin, comment out the script tag linking to `js/index.min.js` in the html file.
 
-Write your code in `challenge.js` - it's already included in the HTML via a `<script>` tag, so when you add your code, it will run on the page.
+Write your code in `js/challenge.js` - it's already included in the HTML via a `<script>` tag, so when you add your code, it will run on the page.
 
 Add the following features one by one, refreshing the page to see your functionality working as you build.
 
