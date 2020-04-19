@@ -33,4 +33,12 @@ Add the following features one by one, refreshing the page to see your functiona
   When 'resume' is clicked, it should restart the counter and re-enable the buttons.
 5. As a user, I can leave comments on my gameplay, such as: "Wow, what a fun game this is."
 
+### Hint for the timer
+
+If you're not sure how to create a pause the timer, look into:
+[`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+[`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+[`clearinterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+
+
 <p class='util--hide'>View <a href='https://learn.co/lessons/jsdom-dom-challenge'>DOM Challenge</a> on Learn.co and start learning to code for free.</p>
