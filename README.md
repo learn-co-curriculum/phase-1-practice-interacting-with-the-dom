@@ -39,6 +39,3 @@ If you're not sure how to create or pause a timer, look into:
 [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
 [`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 [`clearinterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
-
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/jsdom-dom-challenge'>DOM Challenge</a> on Learn.co and start learning to code for free.</p>
