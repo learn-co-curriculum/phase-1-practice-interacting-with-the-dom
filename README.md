@@ -36,9 +36,9 @@ functionality working as you build.
    count of the number of 'likes' associated with that number displayed.
 4. As a user, I can pause the counter, which should:
 
-  * pause the counter
-  * disable all buttons except the pause button
-  * switch the label on the button from "pause" to "resume"
+   * pause the counter
+   * disable all buttons except the pause button
+   * switch the label on the button from "pause" to "resume"
   
 5. As a user, I should be able to click the "restart" button to restart the
    counter and re-enable the buttons.
