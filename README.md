@@ -1,4 +1,4 @@
-# Challenge: Interacting with the DOM using Events
+# Additional Practice: Interacting with the DOM using Events
 
 If you open up index.html in the browser, you'll find a small application. It has a few features:
 
