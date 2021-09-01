@@ -1,5 +1,12 @@
 # Additional Practice: Interacting with the DOM using Events
 
+## Learning Goals
+
+- Create event listeners on DOM nodes using `addEventListener()`
+- Manipulate the DOM in response to events
+
+## Instructions
+
 If you open up index.html in the browser, you'll find a small application. It has a few features:
 
 * A Counter that increases by 1 each second
