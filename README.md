@@ -1,4 +1,4 @@
-# Additional Practice: Interacting with the DOM using Events
+# Interacting with the DOM using Events
 
 ## Learning Goals
 
