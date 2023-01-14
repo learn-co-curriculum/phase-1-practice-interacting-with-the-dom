@@ -26,6 +26,11 @@ using what you've learned about JavaScript and DOM Manipulation.
 Note that there are **no tests** for this lab. To confirm if the application is
 working, you'll have to manually test the application in the browser.
 
+Once you're done, be sure to commit and push your code up to GitHub, then submit
+the assignment using CodeGrade. Even though this practice lab does not have
+tests, it must still be submitted through CodeGrade in order to be marked as
+complete in Canvas.
+
 ### Getting Started
 
 To begin, comment out the script tag linking to `js/index.min.js` in the html
