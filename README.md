@@ -56,7 +56,7 @@ As a user, I can:
   - pause the counter
   - disable all buttons except the pause button
   - switch the label on the button from "pause" to "resume"
-- Click the "restart" button to restart the counter and re-enable the buttons.
+- Click the "resume" button to restart the counter and re-enable the buttons.
 - Leave comments on my gameplay, such as: "Wow, what a fun game this is."
 
 ## Timer Hints
