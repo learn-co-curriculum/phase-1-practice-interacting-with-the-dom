@@ -53,7 +53,31 @@ comment.addEventListener('submit', (e) => {
     commentList.append(commentNew);
 })
 
+// timer increment per second
+function timer() {
+    count.innerText++;
+};
 
+const autoCount = setInterval(timer, 1000);
+
+// pause btn
+let isDisabled = false;
+const pauseBtn = document.querySelector('#pause')
+pauseBtn.addEventListener('click', () => {
+    // pause counter
+    clearInterval(autoCount);
+
+    // disable btns except pause btngit 
+    const btns = [minusBtn, plusBtn, heartBtn];
+   
+    for (button of btns) {
+        isDisabled = !isDisabled;
+        minusBtn.disabled = isDisabled;
+        plusBtn.disabled = isDisabled;
+        heartBtn.disabled = isDisabled;        
+
+    }
+})
 
 
 
