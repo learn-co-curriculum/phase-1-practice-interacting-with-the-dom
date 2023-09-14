@@ -3,13 +3,18 @@
 const minusOneFromCounter = document.querySelector(`button`) 
 
 minusOneFromCounter.addEventListener(`click`, (e)=>{
-    const lowerCounter = document.getElementById(`.counter`) 
+    const lowerCounter = document.getElementById(`counter`) 
     lowerCounter.innerText-- 
 }) 
 
-const plusOneToCounter = document.querySelector('.counter')
+const plusOneToCounter = document.getElementById('plus')
 
-plusOneToCounter.addEventListener('click', (e) => {
-    const plusCounter = document.getElementById('plus')
-    plusCounter.innerText++
+plusOneToCounter.addEventListener(`click`, ()=> {
+    const addCounter = document.getElementById(`counter`) 
+    addCounter.innerText++
 })
+// plusOneToCounter.addEventListener('click', (event) => {
+//     const plusCounter = document.getElementById('plus')
+//     plusCounter.innerText++
+// }) 
+
