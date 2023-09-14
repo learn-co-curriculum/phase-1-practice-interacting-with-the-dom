@@ -13,8 +13,5 @@ plusOneToCounter.addEventListener(`click`, ()=> {
     const addCounter = document.getElementById(`counter`) 
     addCounter.innerText++
 })
-// plusOneToCounter.addEventListener('click', (event) => {
-//     const plusCounter = document.getElementById('plus')
-//     plusCounter.innerText++
-// }) 
+
 
