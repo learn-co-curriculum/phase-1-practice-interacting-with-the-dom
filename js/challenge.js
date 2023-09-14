@@ -14,22 +14,46 @@ plusBtn.addEventListener('click', () => {
 })
 
 // like feature
-let likeCount = 0
 
-heartBtn.addEventListener('click', () => {
-    
-    likeCount++
+// function likeBuilder () {
+//     let likeCount = 0;
 
-    //make new element for click count
-    const like = document.createElement('li')
-    //put like count in new element
-    like.innerText = `${count.innerText} has been liked ${likeCount} times`
-    //append new element to DOM
-    const likeComment = document.querySelector('.likes')
-    likeComment.append(like)
+//     heartBtn.addEventListener('click', () => {
+//         likeCount++
+
+//          //make new element for click count
+//         const like = document.createElement('li')
+
+//         //append new element to DOM
+//         const likeComment = document.querySelector('.likes')
+//         likeComment.append(like)
+        
+//         //put like count in new element
+//         like.innerText = `${count.innerText} has been liked ${likeCount} times`
+          
+//     })
+// }
+
+// likeBuilder();
+
+// check for like happen
+// if no, make new
+// if yes, edit dom
+
+// leave comment
+
+const comment = document.querySelector('form')
+comment.addEventListener('submit', (e) => {
+    e.preventDefault();
+ 
+    const commentNew = document.createElement('p');
+    commentNew.innerText = e.target.comment.value;
+
+    const commentList = document.querySelector('#list');
+    commentList.append(commentNew);
 })
 
 
-// timer increment every second once the page loads
+
 
 
