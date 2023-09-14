@@ -4,13 +4,15 @@ const minusOneFromCounter = document.querySelector(`button`)
 const updateCounter = document.getElementById(`counter`)
 
 minusOneFromCounter.addEventListener(`click`, (e)=>{
-    updateCounter.innerText-- 
+    const lowerCounter = document.getElementById(`.counter`) 
+    lowerCounter.innerText-- 
 }) 
 
 const plusOneToCounter = document.getElementById('plus')
 
 plusOneToCounter.addEventListener('click', (e) => {
-    updateCounter.innerText++
+    const plusCounter = document.getElementById('plus')
+    plusCounter.innerText++
 })
 
 const addNumberLikes = document.getElementById('heart')
